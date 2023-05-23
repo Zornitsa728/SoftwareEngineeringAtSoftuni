@@ -11,20 +11,26 @@ namespace P01.RockPaperScissors
             string paper = "Paper";
             string scissors = "Scissors";
             bool newGame = true;
-            int countInavalidInput = 1;
+
 
             while (newGame)
             {
+                int countInavalidInput = 1;
                 Console.ForegroundColor = ConsoleColor.DarkGreen;
                 Console.Write("Choose [r]ock, [p]aper or [s]cissors: ");
                 string playerMove = Console.ReadLine();
 
                 while (playerMove != "rock" && playerMove != "r" && playerMove != "paper" && playerMove != "p" && playerMove != "scissors" && playerMove != "s")
                 {
-                    countInavalidInput++;
                     Console.ForegroundColor = ConsoleColor.DarkRed;
                     Console.WriteLine("Invalid input. Try Again...");
+                    Console.Write("Choose [r]ock, [p]aper or [s]cissors: ");
                     playerMove = Console.ReadLine();
+
+                    if (playerMove != "rock" && playerMove != "r" && playerMove != "paper" && playerMove != "p" && playerMove != "scissors" && playerMove != "s")
+                    {
+                        countInavalidInput++;
+                    }
 
                     if (countInavalidInput == 3)
                     {
@@ -54,7 +60,7 @@ namespace P01.RockPaperScissors
                             Console.WriteLine($"You have entered an invalid input too many times.");
                             Console.ForegroundColor = ConsoleColor.Red;
                             Console.Write($"Game Over!");
-                                return; 
+                            return;
                         }
                     }
                 }
@@ -117,14 +123,30 @@ namespace P01.RockPaperScissors
                 Console.Write("Type [yes] to Play Again or [no] to quit: ");
                 string playAgain = Console.ReadLine();
 
+                if (playAgain == "yes")
+                {
+                    newGame = true;
+                }
+                else if (playAgain == "no")
+                {
+                    newGame = false;
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                    Console.WriteLine("Thank you for playing!");
+                }
+
                 while (playAgain != "yes" && playAgain != "no")
                 {
-                    countInavalidInput++;
+
                     Console.ForegroundColor = ConsoleColor.DarkRed;
                     Console.WriteLine("Invalid input. Try Again...");
                     Console.Write("Type [yes] to Play Again or [no] to quit: ");
                     playAgain = Console.ReadLine();
 
+                    if (playAgain != "yes" && playAgain != "no")
+                    {
+                        countInavalidInput++;
+                    }
+                    
                     if (countInavalidInput == 3)
                     {
                         Console.ForegroundColor = ConsoleColor.Gray;
@@ -165,9 +187,10 @@ namespace P01.RockPaperScissors
                         Console.ForegroundColor = ConsoleColor.DarkMagenta;
                         Console.WriteLine("Thank you for playing!");
                     }
-                }
 
+                }
             }
+
         }
     }
 }
