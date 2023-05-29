@@ -34,10 +34,6 @@ namespace P10.LadyBugs
                 {
                     continue;
                 }
-                else if (field[index] == 0)
-                {
-                    continue;
-                }
 
                 if (direction == "right")
                 {
