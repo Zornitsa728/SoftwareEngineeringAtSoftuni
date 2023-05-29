@@ -7,7 +7,7 @@ namespace P10.LadyBugs
         static void Main(string[] args)
         {
             int fieldSize = int.Parse(Console.ReadLine());
-            long[] field = new long[fieldSize];
+            int[] field = new int[fieldSize];
             long[] ladybugsIndexes = Console.ReadLine().
                 Split(" ", StringSplitOptions.RemoveEmptyEntries).
                 Select(long.Parse).
@@ -15,7 +15,10 @@ namespace P10.LadyBugs
 
             for (long i = 0; i < ladybugsIndexes.Length; i++)
             {
-                field[ladybugsIndexes[i]] = 1;
+                if (ladybugsIndexes[i] >= 0 && ladybugsIndexes[i] < field.Length)
+                {
+                    field[ladybugsIndexes[i]] = 1;
+                }
             }
 
             string input;
@@ -25,12 +28,12 @@ namespace P10.LadyBugs
 
             while ((input = Console.ReadLine()) != "end")
             {
-                string[] command = input.Split(" ", StringSplitOptions.RemoveEmptyEntries);
+                string[] command = input.Split(" ", StringSplitOptions.RemoveEmptyEntries).ToArray();
                 index = long.Parse(command[0]);
                 direction = command[1];
                 flyLength = long.Parse(command[2]);
 
-                if (index < 0 || index >= field.Length)
+                if (index < 0 || index >= field.Length || field[index] == 0 || flyLength == 0)
                 {
                     continue;
                 }
@@ -39,12 +42,21 @@ namespace P10.LadyBugs
                 {
                     field[index] = 0;
 
-                    for (long freePosition = index + flyLength; freePosition < field.Length; freePosition++)
+                    for (long freePosition = index + flyLength; freePosition >= 0 && freePosition < field.Length;)
                     {
                         if (field[freePosition] == 0)
                         {
-                            field[index + freePosition] = 1;
+                            field[freePosition] = 1;
                             break;
+                        }
+
+                        if (flyLength < 0)
+                        {
+                            freePosition -= flyLength;
+                        }
+                        else
+                        {
+                            freePosition += flyLength;
                         }
                     }
                 }
@@ -52,7 +64,7 @@ namespace P10.LadyBugs
                 {
                     field[index] = 0;
 
-                    for (long freePosition = index - flyLength; 0 <= freePosition; )
+                    for (long freePosition = index - flyLength; freePosition >= 0 && freePosition < field.Length;)
                     {
 
                         if (field[freePosition] == 0)
@@ -63,11 +75,11 @@ namespace P10.LadyBugs
 
                         if (flyLength < 0)
                         {
-                            freePosition++;
+                            freePosition += flyLength;
                         }
                         else
                         {
-                            freePosition--;
+                            freePosition -= flyLength;
                         }
                     }
                 }
