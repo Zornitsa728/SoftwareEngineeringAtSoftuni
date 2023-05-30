@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 
 namespace P10.LadyBugs
 {
@@ -8,12 +9,12 @@ namespace P10.LadyBugs
         {
             int fieldSize = int.Parse(Console.ReadLine());
             int[] field = new int[fieldSize];
-            long[] ladybugsIndexes = Console.ReadLine().
-                Split(" ", StringSplitOptions.RemoveEmptyEntries).
-                Select(long.Parse).
-                ToArray();
+            int[] ladybugsIndexes = Console.ReadLine()
+                .Split(" ", StringSplitOptions.RemoveEmptyEntries)
+                .Select(int.Parse)
+                .ToArray();
 
-            for (long i = 0; i < ladybugsIndexes.Length; i++)
+            for (int i = 0; i < ladybugsIndexes.Length; i++)
             {
                 if (ladybugsIndexes[i] >= 0 && ladybugsIndexes[i] < field.Length)
                 {
@@ -23,65 +24,38 @@ namespace P10.LadyBugs
 
             string input;
             string direction = string.Empty;
-            long index = 0;
-            long flyLength = 0;
+            int index = 0;
+            int flyLength = 0;
 
             while ((input = Console.ReadLine()) != "end")
             {
                 string[] command = input.Split(" ", StringSplitOptions.RemoveEmptyEntries).ToArray();
-                index = long.Parse(command[0]);
+                index = int.Parse(command[0]);
                 direction = command[1];
-                flyLength = long.Parse(command[2]);
+                flyLength = int.Parse(command[2]);
 
                 if (index < 0 || index >= field.Length || field[index] == 0 || flyLength == 0)
                 {
                     continue;
                 }
 
-                if (direction == "right")
+                if (direction == "left")
                 {
-                    field[index] = 0;
-
-                    for (long freePosition = index + flyLength; freePosition >= 0 && freePosition < field.Length;)
-                    {
-                        if (field[freePosition] == 0)
-                        {
-                            field[freePosition] = 1;
-                            break;
-                        }
-
-                        if (flyLength < 0)
-                        {
-                            freePosition -= flyLength;
-                        }
-                        else
-                        {
-                            freePosition += flyLength;
-                        }
-                    }
+                    flyLength *= -1;
                 }
-                else if (direction == "left")
+
+                int nextPosition = index + flyLength;
+                field[index] = 0;
+
+                while (nextPosition >= 0 && nextPosition < field.Length)
                 {
-                    field[index] = 0;
-
-                    for (long freePosition = index - flyLength; freePosition >= 0 && freePosition < field.Length;)
+                    if (field[nextPosition] == 0)
                     {
-
-                        if (field[freePosition] == 0)
-                        {
-                            field[freePosition] = 1;
-                            break;
-                        }
-
-                        if (flyLength < 0)
-                        {
-                            freePosition += flyLength;
-                        }
-                        else
-                        {
-                            freePosition -= flyLength;
-                        }
+                        field[nextPosition] = 1;
+                        break;
                     }
+
+                    nextPosition += flyLength;
                 }
             }
 

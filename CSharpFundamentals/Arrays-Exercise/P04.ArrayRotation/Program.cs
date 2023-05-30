@@ -8,20 +8,21 @@
             int rotations = int.Parse(Console.ReadLine());
             int[] result = numbers;
             int firstNum;
+            int rotationsOptimize = rotations % numbers.Length;
 
-            for (int i = 0; i < rotations; i++)
+            for (int i = 0; i < rotationsOptimize; i++)
             {
                 firstNum = result[0];
 
-                for (int j = 0; j < numbers.Length; j++)
+                for (int currentNum = 0; currentNum < numbers.Length; currentNum++)
                 {
-                    if (j < numbers.Length - 1)
+                    if (currentNum < numbers.Length - 1)
                     {
-                        result[j] = numbers[j + 1];
+                        result[currentNum] = numbers[currentNum + 1];
                     }
                     else
                     {
-                        result[j] = firstNum;
+                        result[currentNum] = firstNum;
                     }
                 }
             }
