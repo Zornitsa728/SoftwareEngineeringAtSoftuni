@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P07.AppendArrays", "P07.App
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P08.AnonymousThreat", "P08.AnonymousThreat\P08.AnonymousThreat.csproj", "{5F6714A2-649E-4187-903F-051873211B36}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P09.PokemonDontGo", "P09.PokemonDontGo\P09.PokemonDontGo.csproj", "{2C45FA55-4389-4DD7-BDC2-4F17A3C3E5CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P09.PokemonDontGo", "P09.PokemonDontGo\P09.PokemonDontGo.csproj", "{2C45FA55-4389-4DD7-BDC2-4F17A3C3E5CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P10.SoftUniCoursePlanning", "P10.SoftUniCoursePlanning\P10.SoftUniCoursePlanning.csproj", "{1B5915CB-5C7F-42A4-804B-7E1C279026AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{2C45FA55-4389-4DD7-BDC2-4F17A3C3E5CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C45FA55-4389-4DD7-BDC2-4F17A3C3E5CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C45FA55-4389-4DD7-BDC2-4F17A3C3E5CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B5915CB-5C7F-42A4-804B-7E1C279026AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B5915CB-5C7F-42A4-804B-7E1C279026AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B5915CB-5C7F-42A4-804B-7E1C279026AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B5915CB-5C7F-42A4-804B-7E1C279026AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

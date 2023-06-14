@@ -19,7 +19,7 @@ namespace P09.PokemonDontGo
             while (input.Count > 0)
             {
                 int indexToRemove = int.Parse(Console.ReadLine());
-                if (IsIndexInRange(input, ref removedEl, indexToRemove))
+                if (IsIndexOutOfRange(input, ref removedEl, indexToRemove))
                 {
                     for (int i = 0; i < input.Count; i++)
                     {
@@ -57,7 +57,7 @@ namespace P09.PokemonDontGo
             Console.WriteLine(sum);
         }
 
-        static bool IsIndexInRange(List<int> input,ref int removedEl, int indexToRemove)
+        static bool IsIndexOutOfRange(List<int> input,ref int removedEl, int indexToRemove)
         {
             if (indexToRemove < 0)
             {
@@ -70,7 +70,7 @@ namespace P09.PokemonDontGo
             {
                 removedEl = input[input.Count - 1];
                 input.RemoveAt(input.Count - 1);
-                input.Insert(input.Count - 1, input[0]);
+                input.Add(input[0]);
                 return true;
             }
 
