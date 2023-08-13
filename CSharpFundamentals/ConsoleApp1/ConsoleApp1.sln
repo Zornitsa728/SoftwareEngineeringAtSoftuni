@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P01.Palindrome", "ConsoleApp1\P01.Palindrome.csproj", "{FAE437C1-D1B8-466B-8981-0E13ABD4DAE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02.PalindromeSecondVersion", "P02.PalindromeSecondVersion\P02.PalindromeSecondVersion.csproj", "{4B48A592-0DED-409F-B7BC-B72761E5C447}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FAE437C1-D1B8-466B-8981-0E13ABD4DAE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAE437C1-D1B8-466B-8981-0E13ABD4DAE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAE437C1-D1B8-466B-8981-0E13ABD4DAE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAE437C1-D1B8-466B-8981-0E13ABD4DAE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B48A592-0DED-409F-B7BC-B72761E5C447}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B48A592-0DED-409F-B7BC-B72761E5C447}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B48A592-0DED-409F-B7BC-B72761E5C447}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B48A592-0DED-409F-B7BC-B72761E5C447}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {116A7B12-D490-4E42-B6EC-2CBBEA4356E0}
+	EndGlobalSection
+EndGlobal
