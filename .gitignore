@@ -396,3 +396,4 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/CSharpAdvanced/MultidimensionalArrays-Exercise/P07.KnightGame/Program.cs
