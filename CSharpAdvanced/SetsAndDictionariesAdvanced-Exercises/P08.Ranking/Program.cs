@@ -59,8 +59,6 @@
 
             }
 
-            
-
             string bestUser = string.Empty;
             int maxValue = int.MinValue;
             int counter = 0;
