@@ -10,9 +10,10 @@ Queue<int> neededFuel = new(Console.ReadLine()
                 .Split(" ", StringSplitOptions.RemoveEmptyEntries)
                 .Select(int.Parse));
 
-int counter = 0;
+int counter = 1;
+bool lost = false;
 
-while (fuel.Any() && consumption.Any() && neededFuel.Any())
+while (neededFuel.Any())
 {
     int currFuel = fuel.Pop();
     int currConsumption = consumption.Dequeue();
@@ -24,11 +25,12 @@ while (fuel.Any() && consumption.Any() && neededFuel.Any())
     else
     {
         Console.WriteLine($"John did not reach: Altitude {counter}");
+        lost = true;
         break;
     }
 }
 
-if (counter > 1 && neededFuel.Any())
+if (counter > 1 && lost)
 {
     Console.WriteLine("John failed to reach the top.");
 
@@ -48,7 +50,7 @@ if (counter == 1)
     Console.WriteLine("John didn't reach any altitude.");
 }
 
-if (!fuel.Any() && !consumption.Any() && !neededFuel.Any())
+if (!fuel.Any() && !consumption.Any() && !neededFuel.Any() && !lost)
 {
     Console.WriteLine("John has reached all the altitudes and managed to reach the top!");
 }
