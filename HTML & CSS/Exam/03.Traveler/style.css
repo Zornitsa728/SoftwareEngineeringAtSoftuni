@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+     font-family: Karla, serif;
+     font-size: 18px;
+}
+
+.site-header {
+    display: flex;
+    flex-direction: column;
+    background-image: url('images/poster.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    height: 700px;
+}
+
+.site-header::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.6);
+    opacity: 0.2;
+}
+
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.header .logo {
+    justify-content: flex-start;
+    margin-left: 60px;
+    width: 80px;
+    margin-top: 20px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: 40px;
+}
+
+.navigation .list{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    list-style: none;
+}
+
+.navigation .nav-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.header-content h1 {
+    font-family: Cormorant Infant, serif;
+    margin-top: 230px;
+    font-size: 90px;
+    margin-bottom: 140px;
+}
+
+.header-content p {
+    max-width: 28em;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #F8F0E9;
+}
+
+.testemonial-content{
+    align-items: flex-start;
+    max-width: 900px;
+}
+
+.testimonial h5{
+    color: gray;
+    font-size: 18px;
+    margin-top: 26px;
+    margin-bottom: 44px;
+}
+
+.testimonial p{
+    display: flex;
+    font-weight: bold;
+    font-family: Cormorant Infant, serif;
+    font-size: 60px;
+    max-width: 15em;
+    margin-bottom: 78px;
+}
+
+.support {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #E14747;
+    color: white;
+}
+
+.support h2{
+    font-family: Cormorant Infant, serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 84px;
+    margin-bottom: 64px;
+}
+
+.support p{
+    max-width: 15em;
+    margin-bottom: 64px;
+    text-align: center;
+}
+
+.understand-your-mind {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F8F0E9;
+}
+
+.understand-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 620px;
+}
+
+.img-understand img{
+    height: 100%;
+    width: 620px;
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
+
+.understand-content h2{
+    font-family: Cormorant Infant, serif;
+    font-weight: bold;
+    font-size: 80px;
+    max-width: 7em;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.understand-content p{
+    font-family: Cormorant Infant, serif;
+    font-size: 26px;
+    margin-bottom: 60px;
+}
+
+.btns-understand {
+    display: flex;
+    flex-direction: column;
+    width: 620px;
+}
+
+.btns-understand .btn{
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 5px 15px;
+    color: black;
+    background-color: #FFFFFF;
+}
+
+.btns-understand .btn.read-more {
+    align-self: self-start;
+    margin-bottom: 46px;
+}
+
+.btns-understand .btn.read-all {
+    align-self: center;
+    margin-bottom: 36px;
+}
+
+.local-guide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #E14747;
+}
+
+.local-guide h2{
+    margin-top: 140px;
+    font-family: Cormorant Infant, serif;
+    font-size: 90px;
+    margin-bottom: 80px;
+    color: white;
+}
+
+.local-guide p {
+    font-family: Cormorant Infant, serif;
+    font-size: 16px;
+    max-width: 42em;
+    text-align: center;
+    margin-bottom: 60px;
+    color: white;
+}
+
+.btn.local-guide {
+    text-decoration: none;
+    padding: 15px 25px;
+    background-color: #FAD87A;
+    color: black;
+    border-radius: 26px;
+    margin-bottom: 74px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 0 40px 80px;
+    background-color: #352B2A;
+}
+
+.footer-logo img{
+    width: 70px;
+    height: 100;
+    margin-bottom: 30px;
+}
+
+.footer-info p:nth-child(1){
+    font-family: Cormorant Infant, serif;
+    font-size: 16px;
+    max-width: 24em;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.rights-reserved {
+    color: white;
+    opacity: 0.3;
+    font-size: 14px;
+}

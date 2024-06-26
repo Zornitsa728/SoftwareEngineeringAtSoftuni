@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14px;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+section {
+    display: flex;
+    max-width: 1060px;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 32px;
+    background-color: #85DCFF;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+section .content {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+h1 {
+    font-size: 40px;
+    color: black;
+    margin-top: 100px;
+    max-width: 9em;
+    margin-bottom: 30px;
+}
+
+.logo-img {
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 355px;
+}
+
+section p{
+    max-width: 35em;
+    margin-bottom: 22px;
+}
+
+section .btns {
+    display:flex;
+    justify-content: flex-start;
+}
+
+section .btn {
+    display: block;
+    padding: 5px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: black;
+}
+
+.btns .get-started {
+    border: 1px solid black;
+    padding: 10px 15px;
+    margin-right: 14px;
+    background-color: #42AA59;
+}
+
+.get-started:hover{
+    color: white;
+    background-color: black;
+}
+
+.btns .learn-more {
+    background-color: white;
+    padding: 10px 15px;
+}

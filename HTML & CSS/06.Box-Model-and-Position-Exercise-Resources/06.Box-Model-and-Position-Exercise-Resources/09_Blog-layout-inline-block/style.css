@@ -1,0 +1,27 @@
+body {
+    position: relative;
+    display: inline-block;
+    font-family: Helvetica, sans-serif;
+    background-color: rgb(238, 238, 238);
+    color: rgb(51, 51, 51) ;
+    padding: 2em;
+}
+
+article {
+    width: 50em;
+}
+
+img {
+    display: block;
+    width: 600px;
+    height: auto;
+    padding: 1em 0;
+}
+
+aside {
+    position: absolute;
+    top: 2vh;
+    right: -40vh;
+    max-width: 300px; 
+    padding: 10px;
+}

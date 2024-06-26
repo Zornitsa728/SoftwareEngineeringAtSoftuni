@@ -1,0 +1,14 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightgray;
+}
+
+h1 {
+    color: red;
+}
+
+@media (min-width:700px) {
+    h1{
+        color: blue;
+    }
+}
